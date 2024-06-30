@@ -1,0 +1,61 @@
+<nav
+  class="navbar header"
+  id="topMenu"
+  style="<%= typeof Colour !== 'undefined' ? `--navbar-link-color: ${Colour};` : '' %> <%= typeof alColour !== 'undefined' ? `--navbar-active-link-color: ${alColour};` : '' %>"
+>
+  <div class="navbar-container header-container">
+    <button id="toggle-button" class="toggle-button">
+      <img class="socials" src="/img/menu.png" />
+    </button>
+    <ul class="navbar-menu header-menu" id="navbar-menu">
+      <li>
+        <a class="navbar-link <%= (page == '') ? 'active' : '' %>" href="/"
+          >Home</a
+        >
+      </li>
+      <li>
+        <a
+          class="navbar-link <%= (page == 'home') ? 'active' : '' %>"
+          href="/home"
+          >About Us</a
+        >
+      </li>
+      <li>
+        <a
+          class="navbar-link <%= (page == 'team') ? 'active' : '' %>"
+          href="/team"
+          >Club Leaders</a
+        >
+      </li>
+      <li>
+        <a
+          class="navbar-link <%= (page == 'newsAndEvents') ? 'active' : '' %>"
+          href="/newsAndEvents"
+          >News and Events</a
+        >
+      </li>
+      <li>
+        <a
+          class="navbar-link <%= (page == 'resources') ? 'active' : '' %>"
+          href="/resources"
+          >Resources</a
+        >
+      </li>
+      <li>
+        <a
+          class="navbar-link <%= (page == 'contact') ? 'active' : '' %>"
+          href="/contact"
+          >Contact Us</a
+        >
+      </li>
+    </ul>
+  </div>
+</nav>
+<script>
+  const toggleButton = document.getElementById("toggle-button");
+  const navbarMenu = document.getElementById("navbar-menu");
+
+  toggleButton.addEventListener("click", function () {
+    navbarMenu.classList.toggle("visible");
+  });
+</script>

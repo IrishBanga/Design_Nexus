@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Share+Tech&display=swap");
+    </style>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/public/css/style.css" />
+    <link rel="icon" href="img/circleLogo.png" type="image/png" />
+    <title>About Us</title>
+  </head>
+
+  <body id="homebody" style="background-color: #1e1e1e">
+    <%- include('partials/header', {page: 'home' , Colour: '#929497' , alColour:
+    'red' }) %>
+    <div class="pageDiv" id="homepage">
+      <div>
+        <h1>SENECA SOFTWARE DEVELOPERS CLUB'S<br />MISSION</h1>
+        <div class="mainDiv">
+          <div style="flex: 1" class="description">
+            <p>
+              The mission of the Seneca Software Developers Club is to provide
+              an inclusive, collaborative and educational environment for
+              students to explore and develop their software development skills.
+              We aim to foster an environment of creativity, learning, and
+              problem-solving where members can grow both professionally and
+              personally.
+            </p>
+            <br />
+            <p>
+              The goals of the Seneca Software Developers Club are to create
+              opportunities for students to collaborate on projects, attend
+              workshops and events, and build a strong network within the tech
+              community. Our aim is to provide access to resources and
+              mentorship opportunities that will help members achieve their full
+              potential in the field of software development. Additionally, we
+              aim to provide a space for members to learn about new
+              technologies, discuss current industry trends, and connect with
+              industry professionals.
+            </p>
+            <br />
+            <p>
+              The Seneca Software Developers Club is dedicated to creating a
+              vibrant and diverse community of software developers. We believe
+              that community engagement is a critical part of our mission, and
+              we strive to create opportunities for members to give back through
+              volunteer and outreach programs. By creating a welcoming and
+              inclusive environment for all members, we hope to inspire and
+              empower the next generation of software developers, and build a
+              strong and sustainable community that supports the growth and
+              success of its members.
+            </p>
+          </div>
+          <div style="flex: 1" class="grid stats">
+            <!-- <div class="card">
+              <div class="cardImgCont">
+                <img src="/img/bulbIcon.png" />
+              </div>
+              <div class="caption">
+                <h3>3</h3>
+                <p>LEADERS</p>
+              </div>
+            </div> -->
+            <div class="card" id="leadersCard">
+              <div class="cardImgCont">
+                <img src="/img/membersIcon.png" />
+              </div>
+              <div class="caption">
+                <h3>395</h3>
+                <p>MEMBERS</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="cardImgCont">
+                <img src="/img/eventsIcon.png" />
+              </div>
+              <div class="caption">
+                <h3>2</h3>
+                <p>UPCOMING EVENTS</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="cardImgCont">
+                <img src="/img/bookBlack.png" />
+              </div>
+              <div class="caption">
+                <h3>100+</h3>
+                <p>RESOURCES</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mainDiv clubPhotoCont">
+        <img src="/img/clubPhoto.png" />
+        <img src="/img/realPhoto.jpeg" />
+      </div>
+      <%- include('partials/footer', {page: 'home' , Colour: '#fff' }) %>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Share+Tech&display=swap");
+  </style>
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Error</title>
+</head>
+
+<body style="background-color: var(--black);">
+  <%- include('partials/header', {page: '404' }) %>
+    <div class="pageDiv" id="contactpage" style="
+        display: flex;
+        flex-direction: column;
+        font-size: 4rem;
+        text-align: center;
+        padding-top: 30vh;
+        justify-content: center;
+        align-items: center;
+      ">
+      ERROR - 404<a class="navbar-link" id="sendBtn" href="/">Head Home</a>
+    </div>
+</body>
+
+</html>

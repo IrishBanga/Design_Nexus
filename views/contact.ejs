@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Share+Tech&display=swap");
+    </style>
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Contact Us</title>
+    <link rel="icon" href="img/circleLogo.png" type="image/png" />
+  </head>
+
+  <body id="contactbody" style="background-color: var(--black)">
+    <%- include('partials/header', {page: 'contact' }) %>
+    <div class="pageDiv" id="contactpage">
+      <div style="text-align: center">
+        <div style="padding: 50px; font-size: 3rem">
+          JOIN SENECA'S COOLEST NERDS
+        </div>
+        <p
+          style="
+            font-size: 1.5rem;
+            margin: 0 auto;
+            padding-bottom: 3rem;
+            line-height: 2rem;
+            color: #afafaf;
+          "
+        >
+          Click to login into Seneca Student Federation's Club Hub where you can
+          join the club!
+        </p>
+        <a
+          class="navbar-link"
+          id="joinBtn"
+          href="https://clubs.ssfinc.ca/feeds?type=club&type_id=35536"
+          >JOIN CLUB</a
+        >
+      </div>
+      <div class="mainDiv">
+        <div style="flex: 1; color: #afafaf" class="form-container">
+          <strong>QUESTIONS?</strong>
+          <br /><br />
+          <form
+            id="contactUsForm"
+            action="https://formsubmit.co/0498c06d68d1be23210ebbb10d0f9860"
+            method="POST"
+          >
+            <div class="form-field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+
+            <div class="form-field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <button id="sendBtn" type="submit">SEND</button>
+          </form>
+        </div>
+        <div style="flex: 1; margin: auto; text-align: center">
+          <a class="navbar-link" href="https://discord.gg/aWJH5Cx9y3"
+            ><img class="socials" src="/img/discord.png" alt="Discord"
+          /></a>
+          <a class="navbar-link" href="https://www.instagram.com/seneca_sdc/">
+            <img class="socials" src="/img/insta-color.png" alt="Instagram" />
+          </a>
+          <a
+            class="navbar-link"
+            href="https://www.linkedin.com/company/seneca-software-developers-club/"
+            ><img class="socials" src="/img/linkedin.png" alt="LinkedIn"
+          /></a>
+          <br /><br />
+          <a
+            class="navbar-link"
+            style="font-size: 1.5rem; color: #afafaf"
+            href="mailto:info.ssdcseneca@gmail.com"
+            >info.ssdcseneca@gmail.com</a
+          >
+        </div>
+      </div>
+    </div>
+    <%- include('partials/footer', {page: 'contact' }) %>
+  </body>
+  <style>
+    #sendBtn {
+      background-color: var(--red);
+      color: white;
+      font-size: 1rem;
+      padding: 0.5rem 1.5rem;
+      border-radius: 4px;
+      margin-right: 1.5rem;
+      font-family: "Share Tech", sans-serif;
+    }
+  </style>
+</html>

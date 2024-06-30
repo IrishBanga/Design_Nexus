@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Share+Tech&display=swap");
+    </style>
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Resources</title>
+    <link rel="icon" href="img/circleLogo.png" type="image/png" />
+  </head>
+
+  <body id="resbody" style="background-color: var(--black)">
+    <%- include('partials/header', {page: 'resources' }) %>
+    <!-- DON'T TOUCH ABOVE -->
+    <div class="pageDiv">
+      <h1>RESOURCES</h1>
+      <p id="resDesc">
+        We've curated the best tips, tricks, and advice from SSDC members to
+        help other Seneca students, in and outside Software Development,
+        succeed.
+      </p>
+      <div class="pageDiv" id="respage">
+        <div class="resCell">
+          <div class="resImgCont">
+            <img src="img/plane.png" alt="Description of your image" />
+          </div>
+          <div class="resInfo">
+            <h4>First Year Student Must-Knows</h4>
+          </div>
+        </div>
+
+        <!-- CELL-->
+
+        <div class="resCell">
+          <div class="resImgCont">
+            <img src="img/apple.png" alt="Description of your image" />
+          </div>
+          <div class="resInfo">
+            <h4>Ratings of Profs and Instructors</h4>
+          </div>
+        </div>
+
+        <!-- CELL-->
+
+        <div class="resCell">
+          <div class="resImgCont">
+            <img
+              src="img/openbook.png"
+              alt="Description of your image"
+              style="max-height: 10rem; padding-top: 2rem"
+            />
+          </div>
+          <div class="resInfo">
+            <h4>General Course Recommendations</h4>
+          </div>
+        </div>
+
+        <!-- CELL-->
+
+        <div class="resCell">
+          <div class="resImgCont">
+            <img src="img/mouse.png" alt="Description of your image" />
+          </div>
+          <div class="resInfo">
+            <h4>Professional Options Recommendations</h4>
+          </div>
+        </div>
+        <!-- CELL-->
+
+        <div class="resCell">
+          <div class="resImgCont">
+            <img src="img/processor.png" alt="Description of your image" />
+          </div>
+          <div class="resInfo">
+            <h4>Reviews of Software Development Courses</h4>
+          </div>
+        </div>
+        <!-- CELL-->
+
+        <div class="resCell">
+          <div class="resImgCont">
+            <img src="img/tie.png" alt="Description of your image" />
+          </div>
+          <div class="resInfo">
+            <h4>Co-Op Advice</h4>
+          </div>
+        </div>
+        <!-- CELL-->
+
+        <div class="resCell">
+          <div class="resImgCont">
+            <img src="img/laptop.png" alt="Description of your image" />
+          </div>
+          <div class="resInfo">
+            <h4>Ratings of Co-Op Placements</h4>
+          </div>
+        </div>
+        <!-- CELL-->
+
+        <div class="resCell">
+          <div class="resImgCont">
+            <img src="img/pig.png" alt="Description of your image" />
+          </div>
+          <div class="resInfo">
+            <h4>Financial Aid Tips</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div id="tipBtn">
+      <div class="roundBtn"></div>
+    </div> -->
+
+    <!-- DON'T TOUCH BELOW-->
+    <%- include('partials/footer', {page: 'resources' }) %>
+  </body>
+</html>

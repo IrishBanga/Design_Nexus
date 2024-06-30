@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>SSDC</title>
+     <link rel="icon" href="img/circleLogo.png" type="image/png" />
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Share+Tech&display=swap");
+  </style>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body id="openbody">
+  <%- include('partials/header', {page: '' , Colour: '#929497' }) %>
+    <section>
+       <!-- <div class="logoCont"><img src="/img/logo.png" alt=""id="logo" /></div> -->
+      <div class="imgCont">
+        <img src="/img/lightOff.png" alt="" id="lightOff" />
+        <img src="/img/lightOn2.png" alt="" id="lightOn" />
+      </div>
+      <div class="gearCont">
+        <img src="/img/lp-gear-2.png" alt="" class="gear-lp" id="gear2" />
+        <img src="/img/lp-gear-1.png" alt="" class="gear-lp" id="gear1" />
+      </div>
+      <div class="bugCont">
+        <img src="/img/bug.png" alt="" class="bug-lp" id="bug-lp" />
+      </div>
+      </div class="titleCont">
+      
+      <div class="nameCont">
+        <div class="arrowbtn" ><img src="/img/logoLeft.png" alt="" class="symbols" id="disabledArrow"/></div>
+        <pre class="formatted-text"><span class="initial">S</span>ENECA<br><span class="initial">S</span>OFTWARE<br><span class="initial">D</span>EVELOPERS<br><span class="initial">C</span>LUB
+       </pre>
+        <!--<div class="arrowbtn"><a href="/home" class="symbol-link"><span class="symbols" id="symbol-2">&gt;</span></a></div>-->
+         <div class="arrowbtn"><a href="/home" class="symbol-link"><img src="/img/logoRight.png" alt="" class="symbols" id="symbol-2" /></a></div>
+         
+      </div>
+     
+    </section>
+    <%- include('partials/footer', {page: 'landing' }) %>
+</body>
+<style>
+  .nameCont {
+    position: fixed;
+    top: 11rem;
+    right: 20%;
+    width: auto;
+  }
+
+  .symbol-link {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+  }
+
+  .formatted-text {
+    color: #fff;
+  }
+
+  #disabledArrow {
+    font-size: 10rem;
+    top: -1rem;
+    left: -8rem;
+    color: #494b4d;
+    height: 9rem;
+  }
+
+  #symbol-2 {
+    color: #ec1e27;
+    height: 9rem;
+  }
+
+  .initial {
+    color: #ec1e27;
+  }
+
+  .formatted-text,
+  .symbols,
+  .initial {
+    font-size: 6rem;
+    font-family: "Share Tech", sans-serif;
+    letter-spacing: 5px;
+  }
+
+    .symbols {
+    font-size: 14rem;
+    position: absolute;
+    bottom: 4rem;
+    right: 10rem;
+  }
+
+  @media (min-width: 1500px) {
+  * {
+    font-size: 18px;
+  }
+}
+
+ @media (max-width: 1100px) {
+ .formatted-text,
+  .symbols,
+  .initial, #disabledArrow {
+    font-size: 4rem;
+  }
+
+   .symbols {
+    font-size: 5rem;
+    bottom: 3.5rem;
+    right: 8rem;
+  }
+
+   #disabledArrow {
+    height: 5rem;
+  top: 0rem;
+  left: -4rem;
+
+  }
+
+  #symbol-2 {
+    height: 5rem;
+    right: 9rem;
+  }
+
+    #lightOff,
+  #lightOn {
+    height: 25rem;
+    right: 5rem;
+    top: 0rem;
+  }
+
+  #lightOff {
+        height: 20rem;
+    left: 3.2rem;
+    top: 0rem;
+  }
+}
+
+@media (max-width: 800px) {
+ .nameCont{
+    right: 10%;
+    top: 22rem;
+  }
+
+     #lightOff,
+  #lightOn {
+   top: -4rem;
+   left: -2rem;
+  }
+
+  #lightOff {
+    height: 20rem;
+   top: -4rem;
+   left: 3rem;
+  }
+
+  .bug-lp {
+    left: -10rem;
+
+  }
+}
+
+/*MOBILE */
+ @media (max-width: 450px) and (max-height: 1000px) {
+ .formatted-text,
+  .symbols,
+  .initial, #disabledArrow {
+    font-size: 3rem;
+
+  }
+
+ #disabledArrow {
+  top: 0rem;
+  left: -2.5rem;
+  height: 3rem;
+  }
+
+    #symbol-2 {
+    height: 3rem;
+    right: 8rem;
+  }
+
+    .nameCont {
+    top: 14rem;
+    right: 1.5rem;
+  }
+
+   #lightOff,
+  #lightOn {
+    height: 15rem;
+    top: -1rem;
+    left: 16rem;
+  }
+
+  #lightOff {
+    height: 12rem;
+    top: -0.9rem;
+    left: 19rem;
+  }
+
+  #gear1, #gear2 {
+    height: 9rem;
+    width: 9rem;
+    left: -9.5rem;
+    bottom: 0.5rem;
+  }
+
+  #gear2 {
+    height: 6rem;
+    width: 6rem;
+    left: -16.25rem;
+   
+  }
+
+  .bug-lp {
+    bottom: -5rem;
+  }
+}
+</style>
+<script>
+  window.onload = function () {
+    setTimeout(function () {
+      const lightOff = document.getElementById("lightOff");
+      const lightOn = document.getElementById("lightOn");
+      const gear1 = document.getElementById("gear1");
+      const gear2 = document.getElementById("gear2");
+      const bug = document.getElementById("bug-lp");
+
+      lightOff.classList.add('fade-out');
+      lightOn.classList.add('fade-in');
+
+      setTimeout(function () {
+        lightOff.style.display = 'none';
+        lightOn.style.opacity = 1;
+
+        setTimeout(function () {
+          gear1.classList.add('roll-in');
+          gear2.classList.add('roll-in');
+          setTimeout(function () {
+            bug.classList.add('animate');
+          }, 500);
+        }, 10);
+      }, 500);
+    }, 500);
+  };
+</script>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Share+Tech&display=swap");
+    </style>
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Club Leaders</title>
+    <link rel="icon" href="img/circleLogo.png" type="image/png" />
+  </head>
+
+  <body id="teambody">
+    <div class="pageDiv" id="teampage">
+      <%- include('partials/header', {page: 'team' }) %>
+
+      <h1>CLUB LEADERS</h1>
+      <div class="gear-chain">
+        <div class="gear-text-container">
+          <div class="gear-container">
+            <div class="gear-wrapper">
+              <img src="/img/finalgear.png" alt="Gear" class="gear" />
+            </div>
+            <div class="picture-wrapper">
+              <img src="/img/pres.png" class="profile-picture" />
+            </div>
+          </div>
+          <div class="text-content">
+            <h2>Pratham Garg</h2>
+            <h2 class="positionTitle">President</h2>
+            <p>
+              This is a placeholder for a description about the leader to
+              encourage connection with current and potential members. It can be
+              both professional and personal.
+            </p>
+          </div>
+        </div>
+        <div class="gear-text-container">
+          <div class="gear-container">
+            <div class="gear-wrapper">
+              <img src="/img/finalgear.png" alt="Gear" class="gear" />
+            </div>
+            <div class="picture-wrapper">
+              <img src="/img/vp.png" class="profile-picture" />
+            </div>
+          </div>
+          <div class="text-content">
+            <h2>Gurmehak Kaur Uppal</h2>
+            <h2 class="positionTitle">Vice President</h2>
+            <p>
+              This is a placeholder for a description about the leader to
+              encourage connection with current and potential members. It can be
+              both professional and personal.
+            </p>
+          </div>
+        </div>
+        <div class="gear-text-container">
+          <div class="gear-container">
+            <div class="gear-wrapper">
+              <img src="/img/finalgear.png" alt="Gear" class="gear" />
+            </div>
+            <div class="picture-wrapper">
+              <img src="/img/tr.png" class="profile-picture" />
+            </div>
+          </div>
+          <div class="text-content">
+            <h2>Saeed Bafana</h2>
+            <h2 class="positionTitle">Treasurer</h2>
+            <p>
+              This is a placeholder for a description about the leader to
+              encourage connection with current and potential members. It can be
+              both professional and personal.
+            </p>
+          </div>
+        </div>
+      </div>
+      <%- include('partials/footer', {page: 'team' }) %>
+    </div>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      startGearAnimation(4);
+    });
+
+    function startGearAnimation(durationInSeconds) {
+      const gears = document.querySelectorAll(".gear-wrapper");
+      gears.forEach((gear) => {
+        gear.style.animationPlayState = "running";
+        gear.style.animationDuration = durationInSeconds + "s";
+
+        gear.addEventListener(
+          "animationend",
+          () => {
+            gear.style.animationPlayState = "paused";
+          },
+          { once: true }
+        );
+      });
+    }
+  </script>
+</html>

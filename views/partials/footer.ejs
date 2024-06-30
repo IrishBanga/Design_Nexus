@@ -1,0 +1,34 @@
+<%if (page && page!=='contact' ) { %>
+    <div class="navbar-container footer1"
+        style="--navbar-link-color: <%= typeof Colour !== 'undefined' ? Colour : '' %>; --navbar-active-link-color: <%= typeof alColour !== 'undefined' ? alColour : '' %>;">
+        <ul class="navbar-menu" id="navbar-menu">
+            <li><a class="navbar-link" id="joinBtn" href="https://clubs.ssfinc.ca/feeds?type=club&type_id=35536">JOIN CLUB</a></li>
+            <li><a class="navbar-link" href="https://discord.gg/aWJH5Cx9y3"><img class="socials" src="/img/discord.png"
+                        alt="Discord"></a></li>
+            <li><a class="navbar-link" href="https://www.instagram.com/seneca_sdc/">
+                    <img class="socials"
+                        src="<%= (typeof Colour !== 'undefined' && Colour === '#1e1e1e') ? '/img/instagram-b.png' : '/img/insta-color.png' %>"
+                        alt="Instagram">
+                </a></li>
+            <li><a class="navbar-link" href="https://www.linkedin.com/company/seneca-software-developers-club/"><img
+                        class="socials" src="/img/linkedin.png" alt="LinkedIn"></a></li>
+
+        </ul>
+    </div>
+    <% }%>
+
+        <% const pageSequence=['home', 'team' , 'newsAndEvents' , 'resources' , 'contact' ]; const
+            currentIndex=pageSequence.indexOf(page); let nextIndex=0; if (currentIndex !==-1) { nextIndex=(currentIndex
+            + 1) % pageSequence.length; } const nextPage=pageSequence[nextIndex]; %>
+
+            <%if (page && page !=='' && page !=='landing' ) { %>
+                <div class="navbar-container footer2" id="arrowCont"
+                    style="--navbar-link-color: <%= typeof Colour !== 'undefined' ? Colour : '' %>; --navbar-active-link-color: <%= typeof alColour !== 'undefined' ? alColour : '' %>;">
+                    <ul class="navbar-menu" id="navbar-menu">
+                        <li><a class="navbar-link back-button" id="backButton" onclick="history.back()"><img src="/img/logoLeft.png" alt="" /></a></li> <p id="slash">/</p>
+                        <li><a class="navbar-link next-button" id="nextButton" href="<%= '/' + nextPage %>"><img src="/img/logoRight.png" alt="" /></a>
+                        </li>
+                        </li>
+                    </ul>
+                </div>
+                <% }%>
