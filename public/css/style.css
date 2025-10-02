@@ -475,26 +475,35 @@ section {
   height: 4rem;
   font-size: 4rem;
   cursor: pointer;
+  transition: transform 0.2s ease-in-out;
 }
 
 #slash {
-  font-size: 4rem;
+  font-size: 2rem;
   padding: 0 0.5rem;
   padding-top: 1.5rem;
   height: 3rem;
-  margin: 0rem 0.5rem;
-  margin-top: 0.5rem;
+  margin: 0rem 0rem;
+  margin-top: 1rem;
 }
 
 #backButton img,
 #nextButton img {
-  max-height: 4rem;
+  max-height: 2rem;
   width: auto;
   object-fit: contain;
 }
 
+#backButton:hover,
+#nextButton:hover,
+#backButton img:hover,
+#nextButton img:hover {
+  background-color: none;
+  transform: scale(1.1);
+}
+
 .navbar-link:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--lightgrey);
 }
 
 .navbar-link.active {
@@ -675,6 +684,17 @@ section {
   height: 81vh;
   padding-top: 0;
   border-radius: 0px;
+
+  /* Hide scrollbar (Firefox) */
+  scrollbar-width: none;
+  /* Hide scrollbar (Old IE/Edge) */
+  -ms-overflow-style: none;
+}
+
+/* Hide scrollbar (Chrome, Safari, Edge, Opera) */
+.news-container::-webkit-scrollbar,
+.events-container::-webkit-scrollbar {
+  display: none; /* or width: 0; height: 0; */
 }
 
 .events-container {
@@ -904,7 +924,7 @@ button {
 
 @media (min-width: 1500px) {
   * {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
@@ -936,7 +956,7 @@ button {
 
 #contactbody .footer2 #slash {
   color: var(--white);
-  margin: 0.5rem;
+  margin-top: 1rem;
 }
 
 #teambody .footer2 {
@@ -954,8 +974,10 @@ button {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
   gap: 0.5rem;
-  padding-top: 0rem;
+  padding-top: 2rem;
   padding-bottom: 4rem;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 #resbody .resCell {
@@ -1003,7 +1025,7 @@ button {
   color: var(--lightgrey);
   font-size: 1.5rem;
   margin: 4rem auto;
-  margin-bottom: 2rem;
+  margin-bottom: 0rem;
   text-align: left;
   max-width: 45rem;
   line-height: 1.75rem;
@@ -1011,9 +1033,8 @@ button {
 
 #resbody .footer2 #slash {
   color: var(--white);
-  margin: 0rem 0.5rem;
-  margin-top: 0.25rem;
-  font-size: 4rem;
+  margin-top: 0.75rem;
+  font-size: 2rem;
 }
 
 @keyframes button-animation {
@@ -1095,6 +1116,14 @@ textarea {
   .clubPhotoCont img {
     width: 100%;
     height: 15rem;
+  }
+
+  .form-container {
+    padding: 0;
+    max-width: 600px;
+    width: 100%;
+    margin: 0;
+    margin-top: 1rem;
   }
 }
 

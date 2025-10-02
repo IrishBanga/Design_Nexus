@@ -45,8 +45,8 @@
 <style>
   .nameCont {
     position: fixed;
-    top: 11rem;
-    right: 20%;
+    top: 16%; /*11rem*/
+    right: 30%;
     width: auto;
   }
 
@@ -92,10 +92,51 @@
     right: 10rem;
   }
 
-  @media (min-width: 1500px) {
-  * {
-    font-size: 18px;
+    #lightOff,
+  #lightOn {
+    height: 38rem;
+    right: 5rem;
+    top: -4rem;
   }
+
+  #lightOff {
+    height: 29rem;
+    left: 6.3rem;
+    top: -2.5rem;
+  }
+
+    .bug-lp {
+    left: -9rem;
+    bottom: -5rem;
+  }
+
+
+@media (max-width: 1600px) {
+  * {
+    font-size: 16px;
+  }
+
+  .nameCont{
+    right: 25%;
+  }
+
+  #lightOff,
+  #lightOn {
+    height: 32rem;
+    right: 5rem;
+    top: -6rem;
+  }
+
+  #lightOff {
+    height: 24rem;
+    left: 5rem;
+    top: -4.5rem;
+  }
+
+   .bug-lp {
+    left: -9rem;
+  }
+
 }
 
  @media (max-width: 1100px) {
@@ -112,7 +153,7 @@
   }
 
    #disabledArrow {
-    height: 5rem;
+  height: 5rem;
   top: 0rem;
   left: -4rem;
 
@@ -123,7 +164,7 @@
     right: 9rem;
   }
 
-    #lightOff,
+  #lightOff,
   #lightOn {
     height: 25rem;
     right: 5rem;
@@ -131,33 +172,38 @@
   }
 
   #lightOff {
-        height: 20rem;
+    height: 20rem;
     left: 3.2rem;
     top: 0rem;
+  }
+  
+   .bug-lp {
+    left: -3rem;
+    bottom: -5rem;
   }
 }
 
 @media (max-width: 800px) {
  .nameCont{
     right: 10%;
-    top: 22rem;
+    top: 30%; /*22rem*/
   }
 
      #lightOff,
   #lightOn {
-   top: -4rem;
+   top: -2rem;
    left: -2rem;
+    height: 16rem;
   }
 
   #lightOff {
-    height: 20rem;
-   top: -4rem;
-   left: 3rem;
+    height: 12rem;
+   top: -1.3rem;
+   left: 1.4rem;
   }
 
   .bug-lp {
     left: -10rem;
-
   }
 }
 
@@ -190,13 +236,13 @@
   #lightOn {
     height: 15rem;
     top: -1rem;
-    left: 16rem;
+    left: 15rem;
   }
 
   #lightOff {
     height: 12rem;
     top: -0.9rem;
-    left: 19rem;
+    left: 18rem;
   }
 
   #gear1, #gear2 {
@@ -214,7 +260,8 @@
   }
 
   .bug-lp {
-    bottom: -5rem;
+    left: -1rem;
+    bottom: -2rem;
   }
 }
 </style>
